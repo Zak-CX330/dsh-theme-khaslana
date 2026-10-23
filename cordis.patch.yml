@@ -1,0 +1,6 @@
+# 白厄主题的 bundle 层：往插件树里插一行浏览器端主题。
+# 安装本包时，DSH 会读取 package.json 的 dsh.client 声明，把 lib/client.js 注入 web 客户端。
+# 这一行只负责让宿主有一个可挂载的 fiber；真正的效果全在 lib/client.js。
+- insert:
+    - id: ui-theme-khaslana
+      name: dsh-theme-khaslana

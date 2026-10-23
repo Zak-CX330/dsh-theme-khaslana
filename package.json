@@ -1,0 +1,67 @@
+{
+  "name": "dsh-theme-khaslana",
+  "version": "0.29.0",
+  "description": "白厄（Phainon / 卡厄斯兰那）同人主题：白昼 / 曜日 / 星渊三形态，带立绘、粒子与壁纸",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zak-CX330/dsh-theme-khaslana.git"
+  },
+  "homepage": "https://github.com/Zak-CX330/dsh-theme-khaslana#readme",
+  "bugs": {
+    "url": "https://github.com/Zak-CX330/dsh-theme-khaslana/issues"
+  },
+  "files": [
+    "lib",
+    "!lib/client.template.js",
+    "cordis.patch.yml",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node build.mjs",
+    "build:release": "node build.mjs --no-art",
+    "build:lazy": "node build.mjs --lazy",
+    "prepare": "node build.mjs --no-art",
+    "check": "node --check lib/index.js && node --check lib/client.template.js && node --check lib/client.js"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "dsh-theme",
+    "theme",
+    "khaslana",
+    "白厄",
+    "卡厄斯兰那",
+    "盗火行者",
+    "崩坏星穹铁道",
+    "honkai-star-rail",
+    "phainon",
+    "hsr",
+    "baie"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "theme",
+        "slots"
+      ]
+    }
+  },
+  "engines": {
+    "dsh": ">=0.2.1-rc.1 <0.3.0-0"
+  },
+  "license": "MIT"
+}
